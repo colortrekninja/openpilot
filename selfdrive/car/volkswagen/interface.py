@@ -160,7 +160,7 @@ class CarInterface(CarInterfaceBase):
     elif ret.vEgo > (self.CP.minSteerSpeed + 2.):
       self.low_speed_alert = False
     if self.low_speed_alert and self.CS.madsEnabled:
-      events.add(EventName.belowSteerSpeed)
+      pass  # events.add(EventName.belowSteerSpeed)
 
     if self.CS.CP.openpilotLongitudinalControl:
       if ret.vEgo < self.CP.minEnableSpeed + 0.5:
